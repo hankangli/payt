@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_package = "com.grpc.lib";
+//protoc --go_out=plugins=grpc:. *.proto
+//订单请求参数
+message StudentRequest {
+    string Id = 1;
+}
+
+// 订单信息
+message StudentInfo {
+    string Id = 1;
+    string Name = 2;
+    string Age = 3;
+}
+
+//订单服务service定义
+service StudentService {
+    rpc GetStudentInfo(StudentRequest) returns (StudentInfo);
+}

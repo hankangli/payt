@@ -1,0 +1,96 @@
+syntax = "proto3";
+option java_package = "com.grpc.hx.lib";
+//protoc --go_out=plugins=grpc:. *.proto
+//创建子账户请求参数
+message CreateSonAccountRequest {
+    string tradeMemBerName = 1; //交易会员名称
+    string currency = 2; //币种
+    string subAcc = 3; //子帐号
+    string boothNo = 4; //摊位号
+    string tradeMemBerGrade = 5; //交易会员级别
+    string tradeMemberProperty = 6; //交易会员性质
+    string contact = 7; //联系人
+    string contactPhone = 8; //联系电话
+    string phone = 9; //手机号码
+    string contactAddr = 10; //联系地址
+    string businessName = 11; //法人姓名
+    // 12 军官证 19 外国护照  13 士兵证 20 其他 17 组织机构代码证 11 护照 14 回乡证 10 身份证 15 户口本
+    string papersType = 12;
+    string papersCode = 13; //证件代码
+    string isMessager = 14; //是否需要短信通知 1-需要 2-不需要
+    string messagePhone = 15; //短信通知手机号码 isMessager为1时必填
+    string email = 16; //邮箱
+}
+
+// 创建子账户返回参数
+message CreateSonAccountCpmB2BResponse {
+    repeated CreateSonAccountDataResponse MessageData = 1;
+}
+
+message CreateSonAccountDataResponse {
+    repeated Base Base = 1;
+    repeated ResHeader ResHeader = 2;
+    repeated CreateSonAccountResponse DataBody = 3;
+}
+
+message Base {
+    string Version = 1;
+    string SignFlag = 2;
+    string SeverModel = 3;
+}
+message ResHeader {
+    string TransCodeId = 1;
+    string TransCode = 2;
+    repeated Status  status = 3;
+}
+message CreateSonAccountResponse {
+    string MemBerCode = 1; //交易会员代码
+    string Remark1 = 2; //备注
+    string Remark2 = 3; //备注
+}
+
+message Status {
+    string Code =1;
+    string Message =2;
+}
+
+//账户之间的交易
+message PayAccountRequest {
+    string payCode =1;//
+    string paySubAccount=2;//
+    string tradeMemCode =3;//
+    string payeesSubAccount =4;//
+    string tradeAccount =5;//
+    string tradeCurrency =6;//
+    string tradeAbstract =7;//
+}
+
+// 账户交易返回值
+message PayAccountCpmResponse {
+    repeated PayAccountDataResponse MessageData = 1;
+}
+
+message PayAccountDataResponse {
+    repeated Base Base = 1;
+    repeated ResHeader ResHeader = 2;
+    repeated PayAccountResponse DataBody = 3;
+}
+
+message PayAccountResponse {
+    string PayCode =1;//
+    string SubAccountMoney =2;//
+    string FreezeMoney =3;//
+    string Remark1 =4;//
+    string Remark2 =5;//
+    string Remark3 =6;//
+    string Remark4 =7;//
+    string Remark5 =8;//
+}
+
+
+
+//华夏分账service定义
+service HxService {
+    rpc CreateSonAccount (CreateSonAccountRequest) returns (CreateSonAccountCpmB2BResponse);
+    rpc PayAccount (PayAccountRequest) returns (PayAccountCpmResponse);
+}
