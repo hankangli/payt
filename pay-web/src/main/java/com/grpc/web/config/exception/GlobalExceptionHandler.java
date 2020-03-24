@@ -1,6 +1,6 @@
 package com.grpc.web.config.exception;
 
-import com.grpc.entiy.returndata.ReturnDatas;
+import com.grpc.interfaces.returndata.ReturnDatas;
 import org.apache.shiro.authc.AuthenticationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

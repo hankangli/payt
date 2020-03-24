@@ -1,9 +1,12 @@
 server:
   port: 9998
 
+# 数据库配置
 spring:
   application:
     name: grpc-pay-web
+
+# 注册中心配置
 eureka:
   client:
     service-url:

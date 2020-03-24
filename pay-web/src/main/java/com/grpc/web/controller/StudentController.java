@@ -1,6 +1,6 @@
 package com.grpc.web.controller;
 
-import com.grpc.entiy.hxsplitaccount.request.PayAccountRequest;
+import com.grpc.interfaces.hxsplitaccount.request.PayAccountRequest;
 import com.grpc.web.grpcservice.HxClientService;
 import com.grpc.web.grpcservice.OrderClientService;
 import com.grpc.web.grpcservice.StudentClientService;

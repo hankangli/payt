@@ -1,6 +1,6 @@
 package com.grpc.web.grpcservice;
 
-import com.grpc.entiy.user.User;
+import com.grpc.interfaces.user.User;
 import org.springframework.stereotype.Service;
 
 /**

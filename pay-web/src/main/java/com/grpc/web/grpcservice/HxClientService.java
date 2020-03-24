@@ -1,18 +1,14 @@
 package com.grpc.web.grpcservice;
 
-import com.grpc.entiy.hxsplitaccount.request.PayAccountRequest;
-import com.grpc.entiy.hxsplitaccount.response.createSonAccount.CreateSonAccountCpmB2BResponse;
-import com.grpc.entiy.hxsplitaccount.response.createSonAccount.CreateSonAccountDataResponse;
-import com.grpc.entiy.hxsplitaccount.response.payAccount.PayAccountCpmResponse;
+import com.grpc.interfaces.hxsplitaccount.request.PayAccountRequest;
+import com.grpc.interfaces.hxsplitaccount.response.payAccount.PayAccountCpmResponse;
 import com.grpc.hx.lib.HxServiceGrpc;
 import com.grpc.hx.lib.Hxpay;
 import io.grpc.Channel;
 import net.devh.springboot.autoconfigure.grpc.client.GrpcClient;
-import org.apache.commons.beanutils.BeanUtils;
 import org.nustaq.serialization.FSTConfiguration;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 

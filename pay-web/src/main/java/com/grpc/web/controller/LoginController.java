@@ -1,7 +1,7 @@
 package com.grpc.web.controller;
 
-import com.grpc.entiy.returndata.ReturnDatas;
-import com.grpc.entiy.user.User;
+import com.grpc.interfaces.returndata.ReturnDatas;
+import com.grpc.interfaces.user.User;
 import com.grpc.web.config.jwt.JWTUtil;
 import com.grpc.web.grpcservice.UserClientService;
 import org.springframework.beans.factory.annotation.Autowired;

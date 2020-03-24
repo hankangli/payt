@@ -1,3 +1,10 @@
 .idea/
 payt.iml
 *.iml
+pay-lib/target/
+pay-web/target/
+pay-interface/target/
+pay-service/target/
+pay-eureka/target/
+pay-dao/target/
+pay-common/target/

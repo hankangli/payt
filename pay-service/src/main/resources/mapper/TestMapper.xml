@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace：命名空间，对statement的信息进行分类管理 -->
+<!-- 注意：在mapper代理时，它具有特殊及重要的作用 -->
+<mapper namespace="com.grpc.dao.test.TestMapper">
+
+    <select id="selectAll" resultType="com.grpc.entity.test.Test">
+        SELECT * FROM t_test
+    </select>
+</mapper>

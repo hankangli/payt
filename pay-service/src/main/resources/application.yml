@@ -6,6 +6,29 @@ grpc:
 spring:
   application:
     name: grpc-pay-provider
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://150.158.124.190:3306/grpcdemo?characterEncoding=utf8&useUnicode=true&useSSL=true&serverTimezone=Hongkong
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+# mybatisl
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      #驼峰下划线转换
+      column-underline: true
+      #逻辑删除配置
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      db-type: mysql
+    refresh: false
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+  mapper-locations: classpath:mapper/*.xml
 eureka:
   client:
     service-url:
