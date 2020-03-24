@@ -44,6 +44,8 @@
         <mybatis.ehcache.version>1.1.0</mybatis.ehcache.version>
         <!--   mysql      -->
         <mysql.version>8.0.18</mysql.version>
+        <!--    redis    -->
+        <redis.version>1.4.1.RELEASE</redis.version>
     </properties>
 
     <dependencyManagement>
@@ -60,6 +62,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <!--集成redis-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-redis</artifactId>
+                <version>${redis.version}</version>
             </dependency>
             <!-- mybatis 依赖 -->
             <dependency>

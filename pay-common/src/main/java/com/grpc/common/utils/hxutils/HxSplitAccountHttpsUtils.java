@@ -1,4 +1,4 @@
-package com.mzywx.common.utils.hxutils;
+package com.grpc.common.utils.hxutils;
 
 import java.io.*;
 import java.net.HttpURLConnection;

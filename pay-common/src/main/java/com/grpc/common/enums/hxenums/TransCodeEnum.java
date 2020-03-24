@@ -1,4 +1,4 @@
-package com.mzywx.common.enums.hxenums;
+package com.grpc.common.enums.hxenums;
 
 /**
  * @ClassName TransCodeEnum

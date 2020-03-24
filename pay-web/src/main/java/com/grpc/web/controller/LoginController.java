@@ -1,6 +1,6 @@
 package com.grpc.web.controller;
 
-import com.grpc.interfaces.returndata.ReturnDatas;
+import com.grpc.common.returndata.ReturnDatas;
 import com.grpc.interfaces.user.User;
 import com.grpc.web.config.jwt.JWTUtil;
 import com.grpc.web.grpcservice.UserClientService;
@@ -36,9 +36,9 @@ public class LoginController {
 
             String token = JWTUtil.sign(username, password);
             response.setHeader("token", token);
-            return new ReturnDatas(200,"登录成功",token);
-        }else {
-            return new ReturnDatas(200,"登录失败",null);
+            return new ReturnDatas("200", "登录成功", token);
+        } else {
+            return new ReturnDatas("200", "登录失败", null);
         }
 
     }

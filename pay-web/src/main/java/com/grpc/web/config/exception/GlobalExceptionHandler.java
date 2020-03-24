@@ -1,6 +1,6 @@
 package com.grpc.web.config.exception;
 
-import com.grpc.interfaces.returndata.ReturnDatas;
+import com.grpc.common.returndata.ReturnDatas;
 import org.apache.shiro.authc.AuthenticationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(AuthenticationException.class)
     public ReturnDatas handleException(AuthenticationException e) {
         logger.error("token is error ：" + e.getMessage(), e);
-        return new ReturnDatas(500, "token 错误", null);
+        return new ReturnDatas("500", "token 错误", null);
     }
 
 

@@ -1,6 +1,7 @@
 package com.grpc.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.grpc.common.utils.redisutils.RedisUtils;
 import com.grpc.interfaces.test.TestIntefaces;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -24,6 +26,9 @@ public class MybatisTest {
 
     @Autowired
     private TestIntefaces testIntefaces;
+
+    @Resource
+    private RedisUtils redisUtils;
 
     @Test
     public void test01() throws Exception{
@@ -43,5 +48,10 @@ public class MybatisTest {
         lists.forEach(f -> {
             System.err.println(f);
         });
+    }
+
+    @Test
+    public void test03() throws Exception{
+        redisUtils.set("hkl","klsjdflsa");
     }
 }

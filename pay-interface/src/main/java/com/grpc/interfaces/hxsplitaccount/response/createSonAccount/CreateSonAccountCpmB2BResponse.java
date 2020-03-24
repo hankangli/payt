@@ -1,7 +1,5 @@
 package com.grpc.interfaces.hxsplitaccount.response.createSonAccount;
 
-import com.grpc.hx.lib.Hxpay;
-import com.mzywx.common.anno.ProtoField;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -16,7 +14,6 @@ import java.io.Serializable;
 @Data
 public class CreateSonAccountCpmB2BResponse implements Serializable {
     private static final long serialVersionUID = -2029277694398178271L;
-    @ProtoField(TargetClass = Hxpay.CreateSonAccountDataResponse.class)
     private CreateSonAccountDataResponse MessageData;
 
 }

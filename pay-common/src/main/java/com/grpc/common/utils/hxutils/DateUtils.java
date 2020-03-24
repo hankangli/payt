@@ -1,4 +1,4 @@
-package com.mzywx.common.utils.hxutils;
+package com.grpc.common.utils.hxutils;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

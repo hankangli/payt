@@ -1,4 +1,4 @@
-package com.mzywx.common.utils.hxutils;
+package com.grpc.common.utils.hxutils;
 
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
